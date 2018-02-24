@@ -10,11 +10,11 @@ const styles = {
         body: {
             fontFamily: 'sans-serif',
         },
-        '#rollover-popup': {
-            background: 'white',
-            bottom: '30px',
-            position: 'fixed',
-        },
+    },
+    rolloverPopup: {
+        background: 'white',
+        bottom: '30px',
+        position: 'fixed',
     },
 }
 
@@ -56,7 +56,7 @@ const App = injectJss(styles)(
                         onMouseOver={ this.handleMouseOver }
                         onMouseOut={ this.handleMouseOut }
                     />
-                    <div id='rollover-popup'>
+                    <div className={this.props.classes.rolloverPopup}>
                         {this.state.activeItem || 'Mouse over a user or task to get their path.'}
                     </div>
                 </div>
