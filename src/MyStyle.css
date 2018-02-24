@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+}
+
+.interactive {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#rollover-popup {
+  background: white;
+  bottom: 30px;
+  position: fixed;
+}
