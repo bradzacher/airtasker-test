@@ -1,4 +1,4 @@
-#Airtasker Front End Test
+# Airtasker Front End Test
 
 Thanks for your interest in Airtasker. As part of our hiring process Airtasker likes to ask candidates to complete a short exercise. It is designed to allow candidates to show off their coding skills and helps us assess a candidate's abilities.
 
@@ -7,7 +7,7 @@ Prerequisites of this task are an understanding of Javascript, Node, NPM and Rea
 The exercise should take between 2 and 4 hours to complete.
 
 
-##Setup
+## Setup
 
 To get started you will need to install the required dependencies:
 
@@ -18,7 +18,7 @@ Then start webpack in watch mode:
 	npm run dev
 
 
-##Objective
+## Objective
 
 Contained in this zip are the basics of an Airtasker activity feed application.
 
@@ -34,9 +34,9 @@ The objective is to complete the supplied React app so that it looks like the ex
 ![alt text](example-over-user.png "Example with mouse over user")
 
 
-##Rules and Limitations
+## Rules and Limitations
 
-###Do:
+### Do:
 
 Create a parser in [MyParser.js](src/MyParser.js) that parses the supplied [activity_feed.json](src/activity_feed.json). This is where you should generate the relevant path.
 
@@ -44,14 +44,14 @@ Create a React component in [MyComponent.jsx](src/MyComponent.jsx) to render a s
 
 Modify styles in [MyStyle.css](src/MyStyle.css) to suit.
 
-###Don't:
+### Don't:
 
 Don't modify `activity_feed.json`, `index.html` or `app.jsx`
 
 
-##Criteria
+## Criteria
 
-###Required
+### Required
 
 The primary goal is well thought out, clean and testable code.
 
@@ -59,14 +59,14 @@ Your submission only needs to work in latest Chrome.
 
 The objective must be completed, and the rules and limitations must be adhered to.
 
-###Highly desired:
+### Highly desired:
 
 Writing tests, using a suite of your choice.
 
 Pixel perfect output.
 
 
-##Notes
+## Notes
 
 We encourage you to ask any questions about the exercise.
 
