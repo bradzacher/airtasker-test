@@ -1,87 +1,96 @@
-export interface Task {
-    default_location_id? : number
-    runners_required_count : number
-    runners_assigned_count : number
-    project : boolean
-    origin_task_id : number
-    origin_task_slug? : any
-    clone_task_ids : any[]
-    clone_task_slugs : any[]
+/* eslint-disable camelcase */
+
+export interface TaskBase {
+    assigned_price : number | null
+    bids_count : number
+    clone_task_slugs : any[] // null in sample data
+    comments_count : number
+    distance : any // null in sample data
+    fixed_price : boolean
     id : number
     name : string
-    slug : string
-    bids_count : number
-    price : number
-    assigned_price? : number
-    comments_count : number
-    deadline : Date
     online_or_phone : boolean
-    fixed_price : boolean
-    state : string
-    created_at : Date
-    first_posted_at : Date
-    posted_or_edited_at : Date
+    origin_task_slug : any // null in sample data
+    price : number
     private_messages_count : number
-    sender_id : number
-    runner_id? : number
-    location_ids : number[]
+    project : boolean
+    runners_required_count : number
+    runners_assigned_count : number
+    slug : string
     sort_present : boolean
-    distance? : any
-    review_by_runner_id? : number
+    state : string
+}
+export interface Task extends TaskBase {
+    clone_task_ids : number[] | null
+    created_at : string
+    deadline : string
+    default_location_id : number | null
+    first_posted_at : string
+    location_ids : number[]
+    origin_task_id : number
+    posted_or_edited_at : string
+    review_by_runner_id : number | null
+    runner_id : number | null
+    sender_id : number
 }
 
-export interface Location {
+export interface LocationBase {
     id : number
+    display_name : string
     latitude : string
     longitude : string
-    display_name : string
 }
+export interface Location extends LocationBase {}
 
 export interface AvatarImage {
     url : string
 }
 
 export interface Avatar {
-    url : string
-    source_url : string
-    resize_url : string
-    tiny : AvatarImage
-    small : AvatarImage
-    thumb : AvatarImage
     medium : AvatarImage
     profile : AvatarImage
+    resize_url : string
+    small : AvatarImage
+    source_url : string
+    thumb : AvatarImage
+    tiny : AvatarImage
+    url : string
 }
 
-export interface Profile {
+export interface ProfileBase {
+    abbreviated_name : string
+    allow_calls_on_tasks : boolean
+    avatar : Avatar
     average_rating : number
     comments_count : number
-    allow_calls_on_tasks : boolean
-    default_location_id : number
-    id : number
     first_name : string
-    avatar : Avatar
-    abbreviated_name : string
-    slug : string
-    pro : boolean
+    id : number
     posted_tasks_count : number
-    run_tasks_count : number
-    received_reviews_count : number
-    ranking_position? : any
+    pro : boolean
     ranking : number
+    ranking_position : any // null in sample data
+    received_reviews_count : number
+    run_tasks_count : number
+    slug : string
+}
+export interface Profile extends ProfileBase {
+    default_location_id : number
 }
 
-export interface Activity {
-    created_at : Date
-    template : string
+export interface ActivityBase {
     event : string
-    task_id : number
+}
+export interface Activity extends ActivityBase {
+    created_at : string
     profile_ids : number[]
+    task_id ?: number
+    template : string
 }
 
 export interface RootObject {
-    tasks : Task[]
+    activity_feed : Activity[]
     locations : Location[]
     profiles : Profile[]
-    activity_feed : Activity[]
+    tasks : Task[]
 }
 export default RootObject
