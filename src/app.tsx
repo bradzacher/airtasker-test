@@ -7,19 +7,19 @@ import MyParser from '~/MyParser'
 
 const styles = {
     '@global': {
-        'body': {
+        body: {
             fontFamily: 'sans-serif',
         },
         '#rollover-popup': {
             background: 'white',
             bottom: '30px',
             position: 'fixed',
-        }
-    }
+        },
+    },
 }
 
 interface State {
-    activeItem : string
+    activeItem : string | null
 }
 interface PropsBase {
 
@@ -28,27 +28,27 @@ type Props = PropsBase & WithStyles<keyof typeof styles>
 
 const App = injectJss(styles)(
     class App extends React.Component<Props, State> {
-        constructor(props : Props) {
+        public constructor(props : Props) {
             super(props)
 
             this.state = {
-                activeItem: null
+                activeItem: null,
             }
         }
 
-        handleMouseOver = (arg : string) => {
+        private handleMouseOver = (arg : string) => {
             this.setState(() => ({
                 activeItem: arg,
             }))
         }
 
-        handleMouseOut = () => {
+        private handleMouseOut = () => {
             this.setState(() => ({
                 activeItem: null,
             }))
         }
 
-        render() {
+        public render() {
             return (
                 <div>
                     <MyComponent
@@ -56,11 +56,13 @@ const App = injectJss(styles)(
                         onMouseOver={ this.handleMouseOver }
                         onMouseOut={ this.handleMouseOut }
                     />
-                    <div id='rollover-popup'>{this.state.activeItem || `Mouse over a user or task to get their path.`}</div>
+                    <div id='rollover-popup'>
+                        {this.state.activeItem || 'Mouse over a user or task to get their path.'}
+                    </div>
                 </div>
             )
         }
-    }
+    },
 )
 
 export default App

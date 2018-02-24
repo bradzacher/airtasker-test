@@ -4,7 +4,7 @@ import injectJss, { WithStyles } from 'react-jss'
 import ParsedFeed from '~/interfaces/ParsedFeed'
 
 const styles = {
-    foo : { }
+    foo: { },
 }
 
 type MouseOverHandler = (item : string) => void
@@ -25,7 +25,7 @@ export const MyComponent = injectJss(styles)(
         public render() {
             return <div>Your solution here</div>
         }
-    }
+    },
 )
 
 export default MyComponent

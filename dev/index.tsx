@@ -18,7 +18,8 @@ function renderApp(TheApp: any) {
         <ReactHotLoader key={1}>
             <TheApp />
         </ReactHotLoader>,
-        rootEl)
+        rootEl,
+    )
 }
 
 renderApp(TestApp)
