@@ -4,10 +4,11 @@
   "description": "Airtasker Front End Test",
   "main": "",
   "scripts": {
-    "dev": "webpack-dev-server --inline --open"
+    "dev": "webpack-dev-server --inline --open",
+    "test": "jest"
   },
-  "author": "",
-  "license": "",
+  "author": "Brad Zacher",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -80,7 +81,7 @@
         "transform": {
             ".tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
         },
-        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
+        "testRegex": "(/__tests__/.+?\\.(test|spec))\\.tsx?$",
         "moduleNameMapper": {
             "^~/(.+)": "./src/query/$1"
         }
