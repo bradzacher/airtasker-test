@@ -10,7 +10,8 @@
   "license": "",
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-jss": "^8.3.3"
   },
   "devDependencies": {
     "@types/colors": "^1.1.3",
