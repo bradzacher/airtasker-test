@@ -96,7 +96,7 @@ module.exports = {
         ],
         'max-depth': [
             'error',
-            4
+            6
         ],
         'max-len': [
             'warn',
