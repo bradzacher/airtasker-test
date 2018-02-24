@@ -59,21 +59,6 @@ module.exports = function getConfig() {
                         : 'awesome-typescript-loader?declaration=false',
                 },
                 {
-                    test: /\.css$/,
-                    loader: [
-                        'style-loader',
-                        'css-loader',
-                    ],
-                },
-                {
-                    test: /\.(woff(2)?|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    loader: 'url-loader?limit=10000&mimetype=application/font-woff',
-                },
-                {
-                    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    loader: 'file-loader',
-                },
-                {
                     test: /\.json$/,
                     exclude: /node_modules/,
                     loader: 'json-loader',
@@ -88,7 +73,7 @@ module.exports = function getConfig() {
         },
         devtool: 'source-map',
         devServer: {
-            contentBase: path.resolve(__dirname, 'dev'),
+            contentBase: path.resolve(__dirname, 'src'),
             publicPath: '/',
             hot: true,
         },
@@ -99,7 +84,7 @@ module.exports = function getConfig() {
             }),
             new webpack.IgnorePlugin(
                 // ignore the test files
-                /__mocks__/, /__tests__/
+                /__mocks__/, /__tests__/,
             ),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
