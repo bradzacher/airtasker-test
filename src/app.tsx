@@ -9,12 +9,25 @@ const styles = {
     '@global': {
         body: {
             fontFamily: 'sans-serif',
+            margin: 0,
+        },
+        '*': {
+            boxSizing: 'border-box',
         },
     },
     rolloverPopup: {
         background: 'white',
-        bottom: '30px',
-        position: 'fixed',
+        paddingTop: '40px',
+        paddingBottom: '30px',
+        paddingLeft: '4px',
+        fontSize: '18px',
+    },
+    container: {
+        boxShadow: '0px 0px 14px 0px #444444',
+        display: 'inline-block',
+        width: '522px',
+        marginLeft: '14px',
+        marginTop: '14px',
     },
 }
 
@@ -50,7 +63,7 @@ const App = injectJss(styles)(
 
         public render() {
             return (
-                <div>
+                <div className={this.props.classes.container}>
                     <MyComponent
                         items={ MyParser.getItems(feed) }
                         onMouseOver={ this.handleMouseOver }

@@ -8,7 +8,13 @@ import TaskElement from '~/components/TaskElement'
 import FillerElement from '~/components/FillerElement'
 
 const styles = {
-
+    container: {
+        paddingTop: '17px',
+        paddingBottom: '18px',
+        paddingLeft: '12px',
+        paddingRight: '12px',
+        borderBottom: '1px solid #F1F1F1',
+    },
 }
 
 interface PropsBase {
@@ -58,7 +64,7 @@ export const ActivityRow = injectJss(styles)(
         })
 
         return (
-            <div>
+            <div className={props.classes.container}>
                 {content}
             </div>
         )

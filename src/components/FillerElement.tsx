@@ -4,7 +4,11 @@ import injectJss, { WithStyles } from 'react-jss'
 const styles = {
     content: {
         textTransform: 'uppercase',
-        color: '#CACACA',
+        color: '#879094',
+        fontSize: '0.85em',
+        fontWeight: 'bold',
+        paddingLeft: '3px',
+        paddingRight: '3px',
     },
 }
 

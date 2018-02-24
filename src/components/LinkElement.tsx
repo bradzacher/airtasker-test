@@ -5,9 +5,13 @@ import { MouseOutHandler, MouseOverHandler } from '~/interfaces/EventHandlers'
 
 const styles = {
     anchor: {
-        textDecoration: 'underline',
+        textDecoration: 'none',
         cursor: 'pointer',
         color: '#028FB6',
+        paddingBottom: '2px',
+        '&:hover': {
+            borderBottom: '1px solid #028FB6',
+        },
     },
 }
 
