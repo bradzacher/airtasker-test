@@ -23,8 +23,8 @@ interface PropsBase {
 }
 type Props = PropsBase & WithStyles<keyof typeof styles>
 
-export const ActivityRow = injectJss(styles)(
-    class ActivityRow extends React.Component<Props> {
+export const LinkElement = injectJss(styles)(
+    class LinkElement extends React.Component<Props> {
         private onMouseOver = () => {
             this.props.onMouseOver(this.props.slug)
         }
@@ -47,4 +47,4 @@ export const ActivityRow = injectJss(styles)(
     },
 )
 
-export default ActivityRow
+export default LinkElement

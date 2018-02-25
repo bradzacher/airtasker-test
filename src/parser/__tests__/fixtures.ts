@@ -69,7 +69,7 @@ function seedProfile(id : number) : Profile {
         default_location_id: id,
     }
 }
-function seedParsedProfile(id : number) : ParsedProfile {
+export function seedParsedProfile(id : number) : ParsedProfile {
     return {
         ...seedBaseProfile(id),
         default_location: locations[id - 1],
@@ -125,7 +125,7 @@ function seedTask(id : number) : Task {
         sender_id: id,
     }
 }
-function seedParsedTask(id : number) : ParsedTask {
+export function seedParsedTask(id : number) : ParsedTask {
     return {
         ...seedBaseTask(id),
         clone_tasks: null,
