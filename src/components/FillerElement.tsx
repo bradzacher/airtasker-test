@@ -6,7 +6,7 @@ const styles = {
         textTransform: 'uppercase',
         color: '#879094',
         fontSize: '0.85em',
-        fontWeight: 'bold',
+        fontWeight: '500',
         paddingLeft: '3px',
         paddingRight: '3px',
     },

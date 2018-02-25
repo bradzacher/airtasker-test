@@ -10,10 +10,14 @@ import FillerElement from '~/components/FillerElement'
 const styles = {
     container: {
         paddingTop: '17px',
-        paddingBottom: '18px',
-        paddingLeft: '12px',
-        paddingRight: '12px',
+        paddingBottom: '17px',
+        paddingLeft: '7px',
+        paddingRight: '7px',
+        // the margin brings the border in from the edge as per the examples
+        marginLeft: '5px',
+        marginRight: '5px',
         borderBottom: '1px solid #F1F1F1',
+        lineHeight: '18px',
     },
 }
 
