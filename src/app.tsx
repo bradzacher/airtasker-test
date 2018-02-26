@@ -5,31 +5,7 @@ import feed from '~/activity_feed.json'
 import MyComponent from '~/MyComponent'
 import MyParser from '~/MyParser'
 
-const styles = {
-    '@global': {
-        body: {
-            fontFamily: 'sans-serif',
-            margin: 0,
-        },
-        '*': {
-            boxSizing: 'border-box',
-        },
-    },
-    rolloverPopup: {
-        background: 'white',
-        paddingTop: '40px',
-        paddingBottom: '30px',
-        paddingLeft: '5px',
-        fontSize: '18px',
-        lineHeight: '22px',
-    },
-    container: {
-        boxShadow: '0px 0px 13px 0px #444444',
-        display: 'inline-block',
-        width: '522px',
-        margin: '14px',
-    },
-}
+import styles from './appStyles'
 
 interface State {
     activeItem : string | null
